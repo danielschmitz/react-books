@@ -22,8 +22,9 @@ export default function ListCategories(params) {
         ))
       }
     </ul>
-    <footer>
+    <footer className="itensBetween">
       <a href="/">Back</a>
+      <a href="/categories/create">New Category</a>
     </footer>
   </article>
 };

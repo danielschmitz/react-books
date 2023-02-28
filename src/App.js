@@ -3,7 +3,10 @@ import { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import ListBooks from './books/list'
 import ListCategories from './categories/list'
+import EditCategory from './categories/edit'
 import ListFriends from './friends/list'
+import CreateCategory from './categories/create'
+import RemoveCategory from './categories/remove'
 
 export default function App() {
 
@@ -35,6 +38,9 @@ export default function App() {
         <Routes>
           <Route exact path="/" element={<ListBooks />} />
           <Route exact path="/categories" element={<ListCategories />} />
+          <Route exact path="/categories/edit/:id" element={<EditCategory />} />
+          <Route exact path="/categories/create" element={<CreateCategory />} />
+          <Route exact path="/categories/remove/:id" element={<RemoveCategory />} />
           <Route exact path="/friends" element={<ListFriends />} />
         </Routes>
       </main>
