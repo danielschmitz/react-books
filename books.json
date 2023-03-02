@@ -6,26 +6,22 @@
     },
     {
       "id": 2,
-      "name": "Python 22"
+      "name": "Python"
     },
     {
       "id": 3,
-      "name": "JavaScript2"
+      "name": "JavaScript"
     },
     {
       "id": 4,
       "name": "C#"
-    },
-    {
-      "name": "ddddd",
-      "id": 5
     }
   ],
   "friends": [
     {
       "id": 1,
       "name": "John",
-      "email": "john@example.com"
+      "email": "john@example.com2"
     },
     {
       "id": 2,
@@ -40,22 +36,25 @@
   ],
   "books": [
     {
+      "id": 1,
       "title": "Head First Java",
       "author": "Kathy Sierra, Bert Bates",
-      "publish": "2003-02-09",
-      "categoryId": 1,
-      "complete": 70,
-      "friendId": 2
+      "publish": "2003-02-14",
+      "categoryId": "1",
+      "complete": "82",
+      "friendId": 0
     },
     {
+      "id": 2,
       "title": "Effective Java",
       "author": "Joshua Bloch",
       "publish": "2001-06-11",
       "categoryId": 1,
       "complete": 90,
-      "friendId": 1
+      "friendId": 0
     },
     {
+      "id": 3,
       "title": "Java Concurrency in Practice",
       "author": "Brian Goetz",
       "publish": "2006-05-19",
@@ -64,6 +63,7 @@
       "friendId": 0
     },
     {
+      "id": 4,
       "title": "Learning Python",
       "author": "Mark Lutz",
       "publish": "2013-06-12",
@@ -72,14 +72,16 @@
       "friendId": 0
     },
     {
+      "id": 5,
       "title": "Fluent Python",
       "author": "Luciano Ramalho",
       "publish": "2015-08-20",
       "categoryId": 2,
       "complete": 80,
-      "friendId": 3
+      "friendId": 0
     },
     {
+      "id": 6,
       "title": "Python for Data Analysis",
       "author": "Wes McKinney",
       "publish": "2012-10-01",
@@ -88,6 +90,7 @@
       "friendId": 0
     },
     {
+      "id": 7,
       "title": "JavaScript: The Good Parts",
       "author": "Douglas Crockford",
       "publish": "2008-05-08",
@@ -96,6 +99,7 @@
       "friendId": 0
     },
     {
+      "id": 8,
       "title": "Eloquent JavaScript",
       "author": "Marijn Haverbeke",
       "publish": "2011-12-04",
@@ -104,6 +108,7 @@
       "friendId": 1
     },
     {
+      "id": 9,
       "title": "JavaScript: The Definitive Guide",
       "author": "David Flanagan",
       "publish": "1996-10-01",
@@ -112,6 +117,7 @@
       "friendId": 0
     },
     {
+      "id": 10,
       "title": "C# in Depth",
       "author": "Jon Skeet",
       "publish": "2019-04-29",
@@ -120,6 +126,7 @@
       "friendId": 0
     },
     {
+      "id": 11,
       "title": "Pro C# 7",
       "author": "Andrew Troelsen",
       "publish": "2017-08-08",
@@ -128,6 +135,7 @@
       "friendId": 2
     },
     {
+      "id": 12,
       "title": "C# 8.0 and .NET Core 3.0",
       "author": "Mark J. Price",
       "publish": "2019-10-10",
@@ -136,6 +144,7 @@
       "friendId": 0
     },
     {
+      "id": 13,
       "title": "ASP.NET Core in Action",
       "author": "Andrew Lock",
       "publish": "2018-11-14",
@@ -144,6 +153,7 @@
       "friendId": 0
     },
     {
+      "id": 14,
       "title": "Pro ASP.NET Core MVC 2",
       "author": "Adam Freeman",
       "publish": "2017-11-28",

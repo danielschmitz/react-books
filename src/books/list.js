@@ -18,17 +18,19 @@ export default function ListBooks(params) {
           <th>Publish</th>
           <th>% complete</th>
           <th>Category</th>
+          <th>Friend</th>
         </tr>
       </thead>
       <tbody>
         {
           books.map((book, index) => (
             <tr key={index}>
-              <td>{book.title}</td>
+              <td><a href={`/books/edit/${book.id}`}>{book.title}</a></td>
               <td>{book.author}</td>
               <td>{book.publish}</td>
               <td>{book.complete}</td>
               <td>{book.category.name}</td>
+              <td>{book.friendId ? book.friend.name : ''}</td>
             </tr>
           ))
         }
