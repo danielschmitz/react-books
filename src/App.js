@@ -4,9 +4,11 @@ import { Route, Routes } from 'react-router-dom'
 import ListBooks from './books/list'
 import ListCategories from './categories/list'
 import EditCategory from './categories/edit'
-import EditFriend, { loader } from './friends/edit'
+import EditFriend from './friends/edit'
 import ListFriends from './friends/list'
 import CreateCategory from './categories/create'
+import CreateBook from './books/create'
+import RemoveBook from './books/remove'
 import RemoveCategory from './categories/remove'
 import CreateFriend from './friends/create'
 import RemoveFriend from './friends/remove'
@@ -35,13 +37,15 @@ export default function App() {
         <ul>
           <li><a href="/categories">Categories</a></li>
           <li><a href="/friends">Friends</a></li>
-          <li><a href="#" role="button">New Book</a></li>
+          <li><a href="/books/create" role="button">New Book</a></li>
         </ul>
       </nav>
       <main>
         <Routes>
           <Route exact path="/" element={<ListBooks />} />
+          <Route exact path="/books/create" element={<CreateBook />} />
           <Route exact path="/books/edit/:id" element={<EditBook />} />
+          <Route exact path="/books/remove/:id" element={<RemoveBook />} />
           <Route exact path="/categories" element={<ListCategories />} />
           <Route exact path="/categories/edit/:id" element={<EditCategory />} />
           <Route exact path="/categories/create" element={<CreateCategory />} />
