@@ -32,7 +32,7 @@ export default function CreateBook() {
     e.preventDefault()
 
     if (book.friendId === '0') { // fix frindId 0 as string
-      book.friendId = 0;
+      book.friendId = 0
     }
 
     service.books.save(book).then(() => {
@@ -44,11 +44,6 @@ export default function CreateBook() {
     <article>
       <header>
         <strong>Create Book</strong>
-        <a
-          style={{
-            float: "right",
-          }}
-          href={`/books/remove/${book.id}`}>Remove</a>
       </header>
 
       <ShowJson>{book}</ShowJson>
@@ -80,6 +75,7 @@ export default function CreateBook() {
       </div>
 
       <div className="grid">
+
         <div>
           <label htmlFor="name">Publish</label>
           <input type="date"
@@ -98,21 +94,37 @@ export default function CreateBook() {
             onChange={handleInputChange}
           />
         </div>
+
       </div>
 
       <div className="grid">
+
         <div>
-          <label htmlFor="fruit">Friend</label>
-          <select id="friendId" name="friendId" onChange={handleInputChange} value={book.friendId}>
-            <option value={0}> None </option>
-            <Friends friends={friends}/>
+          <label htmlFor="firendId">Friend</label>
+          <select id="friendId" name="friendId"
+            onChange={handleInputChange}
+            value={book.friendId}>
+            <option value={0}> Nobody </option>
+            {friends.map(friend => (
+              <option
+                key={friend.id}
+                value={friend.id}
+              >{friend.name}</option>
+            ))}
           </select>
         </div>
 
         <div>
-          <label htmlFor="fruit">Category</label>
-          <select id="categoryId" name="categoryId" onChange={handleInputChange} value={book.categoryId}>
-            <Categories categories={categories}/>
+          <label htmlFor="categoryId">Category</label>
+          <select id="categoryId" name="categoryId"
+            onChange={handleInputChange}
+            value={book.categoryId}>
+            {categories.map(category => (
+              <option
+                key={category.id}
+                value={category.id}
+              >{category.name}</option>
+            ))}
           </select>
         </div>
 
@@ -124,21 +136,4 @@ export default function CreateBook() {
       </footer>
     </article>
   </form>
-};
-
-function Friends({ friends }) {
-  return friends.map(friend => (
-    <option
-      key={friend.id}
-      value={friend.id}
-    >{friend.name}</option>
-  ))
-}
-function Categories({ categories }) {
-  return categories.map(category => (
-    <option
-      key={category.id}
-      value={category.id}
-    >{category.name}</option>
-  ))
 }

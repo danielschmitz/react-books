@@ -104,7 +104,7 @@ export default function EditBook() {
         <div>
           <label htmlFor="fruit">Friend</label>
           <select id="friendId" name="friendId" onChange={handleInputChange} value={book.friendId}>
-            <option value={0}> None </option>
+            <option value={0}> Nobody </option>
             <Friends friends={friends}/>
           </select>
         </div>
