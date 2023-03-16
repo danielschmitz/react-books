@@ -1,31 +1,29 @@
-
 .itensBetween {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .itensBetween > * {
-    max-width: 200px;
+  max-width: 200px;
 }
 
 .error {
-    color: red;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: blanchedalmond;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid red;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: blanchedalmond;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid red;
 }
 
 .itensCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .itensCenter > * {
-    max-width: 200px;
+  max-width: 200px;
 }
-
