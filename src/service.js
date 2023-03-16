@@ -1,5 +1,4 @@
-
-const api = "http://localhost:3001/"
+const api = "http://localhost:3001/";
 
 async function request(url, method = "GET", data) {
   const options = {
@@ -21,21 +20,24 @@ const service = {
     getAll: () => request("books?_expand=friend&_expand=category"),
     getByCategoryId: (id) => request(`books?categoryId=${id}`),
     getByFriendId: (id) => request(`books?friendId=${id}`),
-    save: (data) => request(`books/${data.id ?? ''}`, data.id ? "PUT" : "POST", data),
-    remove: (id) => request(`books/${id}`, "DELETE")
+    save: (data) =>
+      request(`books/${data.id ?? ""}`, data.id ? "PUT" : "POST", data),
+    remove: (id) => request(`books/${id}`, "DELETE"),
   },
   categories: {
     getAll: () => request("categories"),
     getById: (id) => request(`categories/${id}`),
-    save: (data) => request(`categories/${data.id ?? ''}`, data.id ? "PUT" : "POST", data),
-    remove: (id) => request(`categories/${id}`, "DELETE")
+    save: (data) =>
+      request(`categories/${data.id ?? ""}`, data.id ? "PUT" : "POST", data),
+    remove: (id) => request(`categories/${id}`, "DELETE"),
   },
   friends: {
     getAll: () => request("friends"),
     getById: (id) => request(`friends/${id}`),
-    save: (data) => request(`friends/${data.id ?? ''}`, data.id ? "PUT" : "POST", data),
-    remove: (id) => request(`friends/${id}`, "DELETE")
+    save: (data) =>
+      request(`friends/${data.id ?? ""}`, data.id ? "PUT" : "POST", data),
+    remove: (id) => request(`friends/${id}`, "DELETE"),
   },
-}
+};
 
-export default service
+export default service;
